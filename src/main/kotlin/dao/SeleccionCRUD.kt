@@ -18,7 +18,7 @@ class SeleccionCRUD {
         return simulatedSeleccionDatabase.first { it.ID == id }
     }
 
-    fun getSelecciones(): Array<Seleccion> {
+    fun listSelecciones(): Array<Seleccion> {
         return simulatedSeleccionDatabase.toTypedArray()
     }
 

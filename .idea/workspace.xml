@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d50a587e-6d8a-4609-85de-1b5cdb71a9e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LaBatalla.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LaBatallaDeLuke.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Tutorial_8_dic.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dao/JugadorCRUD.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dao/SeleccionCRUD.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dao/simulated_database.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/mates.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/Jugador.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/Pais.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/Seleccion.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/profe.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/LaBatallaKtTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/MainKtTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/MatesKtTest.kt" afterDir="false" />
-    </list>
+    <list default="true" id="d50a587e-6d8a-4609-85de-1b5cdb71a9e7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

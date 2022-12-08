@@ -22,7 +22,7 @@ class JugadorCRUD {
         return simulatedJugadorDatabase.first { it.ID == id }
     }
 
-    fun getJugadores(): Array<Jugador> {
+    fun listJugadores(): Array<Jugador> {
         return simulatedJugadorDatabase.toTypedArray()
     }
 
