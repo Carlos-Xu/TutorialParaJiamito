@@ -5,7 +5,7 @@ import models.Jugador
 class JugadorCRUD {
 
     fun createJugador(nombre: String, dorsal: Int, demarcacion: Jugador.Demarcaciones, idSeleccion: Int): Jugador? {
-        val newJugador = Jugador(nombre = nombre, dorsal = dorsal, demarcacion = demarcacion, idSeleccion = idSeleccion)
+        val newJugador = Jugador(nombre, dorsal, demarcacion, idSeleccion)
 
         val seleccionExists = simulatedSeleccionDatabase.any { it.ID == idSeleccion }
 

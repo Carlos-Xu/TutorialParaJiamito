@@ -1,27 +1,34 @@
 
+fun main() {
+    val name = "TOYOTA"
 
-class Coche {
+    val regEx = Coche.values()
+        .joinToString("|") { it.name }
+        .toRegex()
 
-    val id: Int = createId()
+    if (regEx.matches(name)) {
+        val parsed = Coche.valueOf(name)
 
-    fun arrancar() {
-
-    }
-
-    companion object {
-        private var nextId = 0
-
-        fun createId(): Int {
-            return nextId++
-        }
+        println(parsed)
+    } else {
+        println("Doesn't match")
     }
 
 }
 
-fun main() {
-    val coches = (0 until 10).map { Coche() }
+enum class Coche {
+    toyota,
+    nisan,
+    audi;
 
-    coches.forEach {
-        println(it.id)
+    companion object {
+        fun createFromString(string: String): Coche? {
+            return when (string) {
+                "TOYOTA" -> toyota
+                "NISAN" -> nisan
+                "AUDI" -> audi
+                else -> null
+            }
+        }
     }
 }
