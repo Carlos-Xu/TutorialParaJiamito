@@ -26,6 +26,12 @@ class JugadorCRUD {
         return simulatedJugadorDatabase.toTypedArray()
     }
 
+    fun listJugadores(idSeleccion: Int): Array<Jugador> {
+        return simulatedJugadorDatabase
+            .filter { it.idSeleccion == idSeleccion }
+            .toTypedArray()
+    }
+
     fun updateJugador(id: Int, updatedData: Jugador): Boolean {
         if (updatedData.ID != id) {
             return false
