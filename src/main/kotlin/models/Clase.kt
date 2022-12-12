@@ -20,13 +20,19 @@ fun main() {
     clase[4] = a5
 
     do {
+        var continuar = true
         when (seleccionarOpcion()) {
             1 -> ordenarAlumnosPorNotaDesc(clase)
             2 -> obtenerAlumnoPorID(clase)
             3 -> crearAlumnoNuevo(clase)
-            4 -> salir()
+            4 -> {
+                val confirmacion = confirmacion()
+                if (salirONo(confirmacion)) {
+                    continuar = false
+                }
+            }
         }
-    } while (!salir())
+    } while (continuar)
 
 //    ordenarAlumnosPorNotaDesc(clase)
 //    println()
@@ -38,26 +44,31 @@ fun main() {
 
 }
 
-fun salir(): Boolean {
-    when (confirmacion()) {
+fun salirONo(entradaUsuario: String): Boolean {
+    when (entradaUsuario) {
         "s" -> return true
         "n" -> return false
     }
-    return true
+    return false
 }
 
 fun confirmacion(): String {
-    var regex = """[s]||[n]""".toRegex()
     do {
         println("¿REALMENTE QUIERES SALIR? s/n")
-        var respuesta = readln()
-        if (!regex.matches(respuesta)) {
+        val respuesta = readln()
+        val cumpleValidacion = validarConfirmacionSalir(respuesta)
+        if (!cumpleValidacion) {
             println("Introduce S o N")
         } else {
             return respuesta
         }
-    } while (!regex.matches(respuesta))
+    } while (!cumpleValidacion)
     return "0"
+}
+
+fun validarConfirmacionSalir(entradaUsuario: String): Boolean {
+    val regex = """[s]||[n]""".toRegex()
+    return regex.matches(entradaUsuario)
 }
 
 fun seleccionarOpcion(): Int {
