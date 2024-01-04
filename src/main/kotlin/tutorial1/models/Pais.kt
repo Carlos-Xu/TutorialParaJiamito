@@ -1,4 +1,4 @@
-package models
+package tutorial1.models
 
 enum class Pais {
     España,

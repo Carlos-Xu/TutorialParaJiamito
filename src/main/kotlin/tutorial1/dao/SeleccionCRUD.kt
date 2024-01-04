@@ -1,7 +1,7 @@
-package dao
+package tutorial1.dao
 
-import models.Pais
-import models.Seleccion
+import tutorial1.models.Pais
+import tutorial1.models.Seleccion
 
 class SeleccionCRUD {
 

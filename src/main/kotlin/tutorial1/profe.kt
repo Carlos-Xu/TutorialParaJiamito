@@ -1,3 +1,5 @@
+package tutorial1
+
 const val LUKE = -1
 const val LIBRE = 0
 const val ESPACIO = 7

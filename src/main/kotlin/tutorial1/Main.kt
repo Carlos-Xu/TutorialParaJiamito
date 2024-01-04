@@ -1,3 +1,5 @@
+package tutorial1
+
 fun main() {
     val intentosMaximos = 5
     var juegoTerminado = false

@@ -1,7 +1,7 @@
-package dao
+package tutorial1.dao
 
-import models.Jugador
-import models.Seleccion
+import tutorial1.models.Jugador
+import tutorial1.models.Seleccion
 
 // WARNING: Declared as such for simulation purposes, not intended to be accessed outside dao package.
 

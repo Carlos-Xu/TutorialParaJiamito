@@ -1,4 +1,4 @@
-package models
+package tutorial1.models
 
 
 data class Seleccion(val name: String, val pais: Pais){

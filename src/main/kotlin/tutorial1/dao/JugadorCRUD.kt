@@ -1,6 +1,6 @@
-package dao
+package tutorial1.dao
 
-import models.Jugador
+import tutorial1.models.Jugador
 
 class JugadorCRUD {
 

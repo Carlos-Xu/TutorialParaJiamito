@@ -1,4 +1,4 @@
-package models
+package tutorial1.models
 
 data class Jugador(val nombre: String, val dorsal: Int, val demarcacion: Demarcaciones, val idSeleccion: Int){
 

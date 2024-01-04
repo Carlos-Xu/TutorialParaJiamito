@@ -34,7 +34,7 @@ internal class MatesKtTest {
             val entry = entradas[index]
             val respuestaEsperada = respuestasEsperadas[index]
 
-            val respuestaGenerada = sumar(entry.first, entry.second)
+            val respuestaGenerada = tutorial1.sumar(entry.first, entry.second)
 
             assertEquals(respuestaEsperada, respuestaGenerada)
         }

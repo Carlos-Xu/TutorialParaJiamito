@@ -1,3 +1,5 @@
+package tutorial1
+
 private const val MAX_TURNS = 10
 private const val TIME_PER_TURN = 1_000L // millis
 private const val TABLE_SIZE = 7

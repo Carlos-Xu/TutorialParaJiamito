@@ -1,4 +1,4 @@
-import models.Alumno
+import tutorial1.models.Alumno
 
 
 
