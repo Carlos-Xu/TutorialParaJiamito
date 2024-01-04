@@ -49,7 +49,7 @@ class Counter {
 
 class Worker implements Runnable {
 
-    Counter counter;
+    final Counter counter;
 
     Worker(Counter counter) {
         this.counter = counter;
