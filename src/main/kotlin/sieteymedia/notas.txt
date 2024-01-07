@@ -1,0 +1,5 @@
+Inicio el servidor, espero jugadores y a medida que vayan entrando mensajes (preferiblemente el nombre del jugador), almaceno el nombre del jugador, la ip y el puerto por el que se ha conectado.
+Espero jugadores hasta que haya 4 jugadores. Una vez que haya 4 jugadores, empieza la simulación.
+
+LÓGICA DEL JUEGO:
+    Justo antes de empezar a jugar, se le reparte una carta a cada jugador.
