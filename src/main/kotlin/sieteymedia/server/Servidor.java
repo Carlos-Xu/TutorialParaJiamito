@@ -2,6 +2,7 @@ package sieteymedia.server;
 
 
 import sieteymedia.game.Game;
+import sieteymedia.game.models.GameState;
 import sieteymedia.game.models.Jugador;
 import sieteymedia.server.models.Connection;
 
@@ -51,6 +52,17 @@ public class Servidor implements Runnable {
 
             // Lógica del juego aquí
             Game game = new Game(jugadores);
+
+            GameState gameState = game.playInitialRound();
+            // informas a cada jugador
+
+            while (!gameState.gameEnded) {
+                // pedir opciones a cada jugador
+                gameState = game.playRound(opcionesDeCadaJugador);
+                
+                // informar de cada estado
+            }
+
 
         } catch (IOException e) {
             e.printStackTrace();

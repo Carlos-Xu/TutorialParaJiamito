@@ -41,7 +41,7 @@ public class Game {
         return collectState();
     }
 
-    public GameState playInitialRound(HashMap<Jugador, StopOrTakeMore> selectedOptions) {
+    public GameState playRound(HashMap<Jugador, StopOrTakeMore> selectedOptions) {
         for (Jugador player : players) {
             StopOrTakeMore option = selectedOptions.get(player);
             PlayerGameState playerGameState = playerGameStates.get(player);

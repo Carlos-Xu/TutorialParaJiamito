@@ -1,5 +1,7 @@
 package sieteymedia.server;
 
+import sieteymedia.game.Game;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
