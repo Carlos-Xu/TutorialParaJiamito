@@ -18,7 +18,7 @@ import static sieteymedia.utils.Utils.barajar;
 import static sieteymedia.utils.Utils.calcularPuntos;
 
 
-public class Servidor {
+public class Servidor implements Runnable {
 
     private final static int PUERTO = 9000;
     private static final int NUM_JUGADORES = 4;
@@ -31,7 +31,9 @@ public class Servidor {
         jugadores = new ArrayList<>();
     }
 
-    public void iniciar() {
+
+    @Override
+    public void run() {
         try(ServerSocket serverSocket = new ServerSocket(PUERTO)) {
 
             System.out.println("Servidor iniciado. Esperando jugadores...\n" );
@@ -89,5 +91,4 @@ public class Servidor {
         return cartas;
 
     }
-
 }
