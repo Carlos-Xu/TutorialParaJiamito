@@ -117,10 +117,4 @@ public class Servidor implements Runnable {
             conn.writeToOutput(mensaje);
         }
     }
-
-    // public interface
-
-    public AskedOptionsStore getCurrentAskedOptionsStore() {
-        return currentAskedOptionsStore;
-    }
 }
