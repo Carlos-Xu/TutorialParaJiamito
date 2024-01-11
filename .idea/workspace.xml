@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d50a587e-6d8a-4609-85de-1b5cdb71a9e7" name="Changes" comment="Adding 7 y media">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/Main.java" afterDir="false" />
+    <list default="true" id="d50a587e-6d8a-4609-85de-1b5cdb71a9e7" name="Changes" comment="make Server asyncronous">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/server/AskedOptionsStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/server/OptionAsker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/StopOrTakeMore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/models/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/models/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/models/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/models/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/models/PlayerGameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/models/PlayerGameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/server/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/server/Servidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +29,8 @@
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Enum" />
+        <option value="Kotlin Data Class" />
         <option value="Class" />
       </list>
     </option>
@@ -43,31 +55,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Cliente.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Test.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.ClaseKtTest (2).executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "/Users/hongtian/Documents/tutorial/src/main/kotlin",
-    "last_opened_file_path": "/Users/hongtian/Documents/TutorialParaJiamito",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Cliente.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.ClaseKtTest (2).executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/hongtian/Documents/tutorial/src/main/kotlin&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hongtian/Documents/TutorialParaJiamito&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="sieteymedia.game" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -90,7 +105,7 @@
       <module name="tutorial" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sieteymedia.server.*" />
+          <option name="PATTERN" value="sieteymedia.server.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -188,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704661605253</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="make Server asyncronous">
+      <option name="closed" value="true" />
+      <created>1704662305000</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704662305000</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,7 +227,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding 7 y media" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding 7 y media" />
+    <MESSAGE value="make Server asyncronous" />
+    <option name="LAST_COMMIT_MESSAGE" value="make Server asyncronous" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

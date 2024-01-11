@@ -4,18 +4,18 @@ import sieteymedia.game.models.Carta;
 import sieteymedia.game.models.GameState;
 import sieteymedia.game.models.Jugador;
 import sieteymedia.game.models.PlayerGameState;
+import sieteymedia.utils.Utils;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-
-import static sieteymedia.utils.Utils.generarBaraja;
+import java.util.stream.Stream;
 
 public class Game {
 
     private final List<Jugador> players;
 
-    private final List<Carta> banca = generarBaraja();
+    private final List<Carta> banca = Utils.generarBaraja();
 
     private final HashMap<Jugador, PlayerGameState> playerGameStates;
 
@@ -41,13 +41,15 @@ public class Game {
         return collectState();
     }
 
-    public GameState playRound(HashMap<Jugador, StopOrTakeMore> selectedOptions) {
+    public GameState playRound(List<Jugador> jugadoresQueSeHanPlantado) {
+        for (Jugador jugador : jugadoresQueSeHanPlantado) {
+            PlayerGameState playerGameState = playerGameStates.get(jugador);
+            playerGameState.setSeHaPlantado();
+        }
+
         for (Jugador player : players) {
-            StopOrTakeMore option = selectedOptions.get(player);
             PlayerGameState playerGameState = playerGameStates.get(player);
-            if (option == null) {
-                continue;
-            }
+
             if (playerGameState == null) {
                 continue;
             }
@@ -55,14 +57,9 @@ public class Game {
                 break;
             }
 
-            switch (option) {
-                case STOP -> {
-                }
-                case TAKE_MORE -> {
-
-                    Carta newCard = banca.remove(1);
-                    playerGameState.addCard(newCard);
-                }
+            if (playerGameState.canContinue()) {
+                Carta newCard = banca.remove(1);
+                playerGameState.addCard(newCard);
             }
         }
 
@@ -70,6 +67,36 @@ public class Game {
     }
 
     private GameState collectState() {
-        return new GameState(playerGameStates, !banca.isEmpty());
+        return new GameState(playerGameStates, isGameFinished());
+    }
+
+    // Helper functions
+
+    private boolean isGameFinished() {
+        if (banca.isEmpty()) {
+            return true;
+        }
+
+        Stream<PlayerGameState> playerStates = players
+                .stream()
+                .map(playerGameStates::get);
+
+        List<PlayerGameState> notElimintedPlayers = playerStates
+                .filter(playerGameState -> !playerGameState.isEliminated())
+                .toList();
+        if (notElimintedPlayers.size() <= 1) {
+            return true;
+        }
+
+        List<PlayerGameState> remainingPlayers = notElimintedPlayers
+                .stream()
+                .filter(playerGameState -> !playerGameState.isSeHaPlantado())
+                .toList();
+
+        if (remainingPlayers.isEmpty()) {
+            return true;
+        }
+
+        return false;
     }
 }
