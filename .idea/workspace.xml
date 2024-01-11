@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d50a587e-6d8a-4609-85de-1b5cdb71a9e7" name="Changes" comment="make Server asyncronous">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/server/AskedOptionsStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/server/OptionAsker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/StopOrTakeMore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/models/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/models/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/models/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/models/Jugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/models/PlayerGameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/game/models/PlayerGameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/server/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/server/Servidor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sieteymedia/utils/Utils.java" afterDir="false" />
-    </list>
+    <list default="true" id="d50a587e-6d8a-4609-85de-1b5cdb71a9e7" name="Changes" comment="make Server asyncronous" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
